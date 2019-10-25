@@ -1,4 +1,4 @@
-local role="${AWS_ASSUME_ROLE_ARN:-${BUILDKITE_PLUGIN_AWS_ASSUME_ROLE_ROLE:-}}"
+role="${AWS_ASSUME_ROLE_ARN:-${BUILDKITE_PLUGIN_AWS_ASSUME_ROLE_ROLE:-}}"
 
 if [[ -n $role ]]; then
    echo "~~~ :arrow_left: UN-Assuming IAM role $role ..."
