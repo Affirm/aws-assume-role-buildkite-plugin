@@ -1,3 +1,8 @@
+local role="${AWS_ASSUME_ROLE_ARN:-${BUILDKITE_PLUGIN_AWS_ASSUME_ROLE_ROLE:-}}"
+
+if [[ -n $role ]]; then
+   echo "~~~ :arrow_left: UN-Assuming IAM role $role ..."
+fi
 export AWS_SECRET_ACCESS_KEY=
 export AWS_ACCESS_KEY_ID=
 export AWS_SESSION_TOKEN=
